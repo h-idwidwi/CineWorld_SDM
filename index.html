@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="air-datepicker/air-datepicker.css">
+    <link id="theme" rel="stylesheet" href="style.css">
+    <title>CineWorld</title>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <img class="header-logo" src="images/logo.svg" alt="logo" border="0"></a>
+            <div>
+                <label class="switch-theme">
+                    <input type="checkbox" class="switch-theme__checkbox">
+                    <span class="switch-theme__slider"></span>
+                    <span class="switch-theme__label font-bold-18"></span>
+                </label>
+            </div>
+        </header>
+        <div class="main">
+            <h1 class="main__title font-title">Register for CineWorld</h1>
+            <div class="form">
+                <div class="form__row">
+                    <div class="form__field">
+                        <label class="font-bold-16">First Name</label>
+                        <input type="text" required class="form__input--valid red-dot font-regular-16" placeholder="Thomas">
+                    </div>
+                    <div class="form__field">
+                        <label class="font-bold-16">Last Name</label>
+                        <input type="text" required class="form__input--valid red-dot font-regular-16" placeholder="Edisson">
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__field">
+                        <label class="font-bold-16">Date of Birth</label>
+                        <input type="text" class="form__date-of-birth form__input--valid" placeholder="DD-MM-YYYY" readonly>
+                    </div>
+                    <div class="form__field">
+                        <label class="font-bold-16">Email</label>
+                        <input type="email" required class="form__input--valid red-dot font-regular-16" placeholder="email@email.ru">
+                    </div>
+                </div>
+                <div class="form__row">
+                    <div class="form__field">
+                        <label class="font-bold-16">Password</label>
+                        <input type="password" required class="form__input--valid red-dot font-regular-16" placeholder="*******">
+                    </div>
+                    <div class="form__field">
+                        <label class="font-bold-16">Repeat Password</label>
+                        <input type="password" required class="form__input--valid red-dot font-regular-16" placeholder="*******">
+                    </div>
+                </div>
+                <div class="dropdown__field">
+                    <label class="font-bold-16" for="dropdown">Select your favourite genre</label>
+                    <div class="dropdown font-regular-16" id="dropdown">
+                        <span class="selected font-regular-16" value="">Favourite genre</span>
+                        <div class="dropdown__caret"></div>
+                    </div>
+                    <ul class="dropdown__menu">
+                        <li class="dropdown__item--active font-regular-16" value="none">None</li>
+                        <li class="font-regular-16" value="adventure">Adventure</li>
+                        <li class="font-regular-16" value="horror">Horror</li>
+                        <li class="font-regular-16" value="cartoon">Cartoon</li>
+                        <li class="font-regular-16" value="documentary">Documentary</li>
+                        <li class="font-regular-16" value="comedy">Comedy</li>
+                    </ul>
+                </div>
+                <div class="form__checkbox">
+                    <label class="checkbox__label font-bold-16"><input type="checkbox" class="checkbox__input">Subscribe to the latest updates of site materials</label>
+                    <label class="checkbox__label font-bold-16"><input type="checkbox" class="checkbox__input">I accept the terms of the "Personal Data Processing Policy" and, for the purpose of establishing feedback with me, I consent to the processing of my personal data.</label>
+                </div>
+                <div class="form__submit">
+                    <button type="submit" class="button--register font-bold-18">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

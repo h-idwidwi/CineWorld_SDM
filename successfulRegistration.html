@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link id="theme" rel="stylesheet" href="style.css">
+    <title>CineWorld</title>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <img class="header-logo" src="images/logo.svg" alt="logo" border="0">
+            <div>
+                <label class="switch-theme">
+                    <input type="checkbox" class="switch-theme__checkbox">
+                    <span class="switch-theme__slider"></span>
+                    <span class="switch-theme__label font-bold-18"></span>
+                </label>
+            </div>
+        </header>
+        <div class="main-sucsessful">
+            <span class="main-sucsessful__text font-title">Thank you for registering on the CineWorld portal</span>
+            <div class="form__submit">
+                <button type="submit" class="button--register-again font-bold-18">Register AGAIN</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function setCookie(name, value, days = 365) {
+            const expires = new Date(Date.now() + days * 864e5).toUTCString();
+            document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+        }
+
+        function getCookie(name) {
+            const match = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+            return match ? match.pop() : null;
+        }
+
+        const themeLink = document.getElementById('theme');
+        const headerLogo = document.querySelector('.header-logo');
+        const themeSwitch = document.querySelector('.switch-theme__checkbox');
+        const registerAgain = document.querySelector('.button--register-again');
+
+        const savedTheme = getCookie('theme');
+        if (savedTheme === 'dark') {
+            themeLink.href = 'darkTheme.css';
+            headerLogo.src = 'images/logo_dark.svg';
+            if (themeSwitch) themeSwitch.checked = true;
+        } else {
+            themeLink.href = 'style.css';
+            headerLogo.src = 'images/logo.svg';
+            if (themeSwitch) themeSwitch.checked = false;
+        }
+
+        if (themeSwitch) {
+            themeSwitch.addEventListener('change', () => {
+                if (themeSwitch.checked) {
+                    themeLink.href = 'darkTheme.css';
+                    headerLogo.src = 'images/logo_dark.svg';
+                    setCookie('theme', 'dark');
+                } else {
+                    themeLink.href = 'style.css';
+                    headerLogo.src = 'images/logo.svg';
+                    setCookie('theme', 'light');
+                }
+            });
+        }
+
+        if (registerAgain) {
+            registerAgain.addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+        }
+    </script>
+</body>
+</html>
