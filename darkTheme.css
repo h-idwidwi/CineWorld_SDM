@@ -620,18 +620,6 @@ label {
         justify-content: center;
     }
 
-    .header {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
-        height: 103px;
-    }
-
-    .header-logo {
-        margin-bottom: 10px;
-    }
-
     .main {
         display: flex;
         flex-direction: column;
@@ -647,10 +635,12 @@ label {
 
 @media (max-width: 430px) {
     .header {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: start;
+        justify-content: center;
         height: 103px;
-  }
+    }
 
     .header-logo {
         margin-bottom: 10px;
