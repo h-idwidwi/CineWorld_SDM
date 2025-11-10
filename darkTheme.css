@@ -367,7 +367,6 @@ input.form__cross-visible {
     overflow-y: overlay;
     padding: 8px 0px 8px 12px;
     box-sizing: border-box;
-    transition: opacity 0.35s ease, transform 0.35s ease;
     z-index: 1;
     pointer-events: none;
 }
