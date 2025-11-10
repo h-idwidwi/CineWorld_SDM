@@ -362,6 +362,7 @@ input.form__cross-visible {
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
+    transition: opacity 0.35 ease;
     opacity: 0;
     max-height: 260px;
     overflow-y: overlay;
